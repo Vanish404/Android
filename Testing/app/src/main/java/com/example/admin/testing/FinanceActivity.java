@@ -28,8 +28,9 @@ public class FinanceActivity extends AppCompatActivity{
 
         frag = new FinanceFragment();
         ftrans = getFragmentManager().beginTransaction();
-        ftrans.add(R.id.financeFL,frag);
+        ftrans.add(R.id.financeFL, frag);
         ftrans.commit();
+
 
 
     }
@@ -44,14 +45,17 @@ public class FinanceActivity extends AppCompatActivity{
                 .setCancelable(false)
                 .setPositiveButton("OK",
                         new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                //Вводим текст и отображаем в строке ввода на основном экране:
+                            public void onClick(DialogInterface dialog,int id)
+                            {
+
+                                    ((TextView) frag.getView().findViewById(R.id.financeFragmentTextView)).
+                                            setText(userInput.getText());
 
                             }
                         })
                 .setNegativeButton("Отмена",
                         new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
+                            public void onClick(DialogInterface dialog, int id) {
                                 dialog.cancel();
                             }
                         });

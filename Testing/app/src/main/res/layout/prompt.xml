@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="#000">
+    android:background="#2b7162">
 
 
     <TextView
@@ -22,9 +22,10 @@
         android:id="@+id/input_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fffefe">
+        android:background="#fffefe"
+        >
 
-        <requestFocus />
+
     </EditText>
     <TextView
         android:id="@+id/tv2"
@@ -38,9 +39,10 @@
         android:id="@+id/input_text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fffefe">
+        android:background="#fffefe"
+        android:inputType="numberDecimal">
 
-        <requestFocus />
+
     </EditText>
 
 </LinearLayout>
